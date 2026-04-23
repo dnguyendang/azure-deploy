@@ -35,7 +35,7 @@ export const PopularHotels = () => {
                                 <h5 className="card-title">{hotel.name}</h5>
                                 <p className="card-text text-muted">{hotel.description || 'No description available.'}</p>
                                 <p className="mb-1"><strong>Location:</strong> {hotel.address}</p>
-                                <p className="mb-1"><strong>Bookings:</strong> {hotel.bookingCount || 0}</p>
+                                <p className="mb-1"><strong>Contact:</strong> {hotel.contact || 0}</p>
                                 <Link to={`/api/room/getRooms/${hotel._id}`} className="btn btn-warning mt-auto">Book Room</Link>
                             </div>
                         </div>
