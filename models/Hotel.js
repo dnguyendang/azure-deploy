@@ -21,6 +21,10 @@ const hotelSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  image: {
+    type: String,
+    default: ''
+  },
   // Add the field to store the count of bookings
   bookingCount: {
     type: Number,

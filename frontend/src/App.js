@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import MyBookings from './components/MyBookings';
 import PaymentSuccess from './components/PaymentSuccess';
 import { About } from './components/About';
+import { CreateHotel } from './components/CreateHotel';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home showAlert={showAlert} />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/hotels" element={<Hotels />} />
+          <Route exact path="/createhotel" element={<CreateHotel showAlert={showAlert} />} />
           <Route exact path="/rooms" element={<AvailableRooms showAlert={showAlert} />} />
           <Route exact path="/api/room/getRooms/:hotelId" element={<Rooms showAlert={showAlert} />} />
           <Route exact path="/mybookings" element={<MyBookings showAlert={showAlert} />} />

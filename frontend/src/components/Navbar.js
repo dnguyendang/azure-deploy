@@ -35,6 +35,9 @@ export const Navbar = () => {
                         <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} aria-current="page" to="/about">About Us</Link>
                         </li>
+                        {/* <li className="nav-item">
+                            <Link className={`nav-link ${location.pathname === "/createhotel" ? "active" : ""}`} aria-current="page" to="/createhotel">Create Hotel</Link>
+                        </li> */}
                         <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/mybookings" ? "active" : ""}`} aria-current="page" to="/mybookings">My Bookings</Link>
                         </li>

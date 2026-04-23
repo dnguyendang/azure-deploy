@@ -1,10 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const Hotel = require("../models/Hotel");
-const { validationResult } = require('express-validator');
+const { body, validationResult } = require('express-validator');
 
 // Create a hotel using POST "/api/hotel/createHotel"
-router.post('/createHotel', async (req, res) => {
+router.post('/createHotel', [
+  body('name', 'Hotel name is required').notEmpty(),
+  body('email', 'Enter a valid email').isEmail(),
+  body('address', 'Address is required').notEmpty(),
+  body('contact', 'Contact is required').notEmpty()
+], async (req, res) => {
   let success = false;
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -20,9 +25,10 @@ router.post('/createHotel', async (req, res) => {
       description: req.body.description,
       email: req.body.email,
       address: req.body.address,
-      contact: req.body.contact
+      contact: req.body.contact,
+      image: req.body.image || ''
     });
-    res.json("Hotel added succesfully");
+    res.json({ success: true, hotel, message: "Hotel added successfully" });
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: 'Server error' });
