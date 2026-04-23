@@ -8,7 +8,7 @@ import PopularHotels from './PopularHotels'; // Import the new component
 export const Home = () => {
     return (
         <div>
-            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-interval="2000"> 
+            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-interval="2000" style={{ maxHeight: '600px', overflow: 'hidden' }}> 
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -20,6 +20,7 @@ export const Home = () => {
                             src={front1}
                             className="d-block w-100 b-image"
                             alt="..."
+                            style={{ height: '600px', objectFit: 'cover' }}
                         />
                         <div className="carousel-caption d-md-block">
                             <p className=''>Warm Welcome To CelebInn  <br></br>
@@ -32,6 +33,7 @@ export const Home = () => {
                             src={front2}
                             className="d-block w-100 b-image"
                             alt="..."
+                            style={{ height: '600px', objectFit: 'cover' }}
                         />
                         <div className="carousel-caption d-md-block caption-container">
                             <p className=''>Jaipur Has The Most <br />Beautiful Hotels</p>
@@ -42,6 +44,7 @@ export const Home = () => {
                             src={front3}
                             className="d-block w-100 b-image"
                             alt="..."
+                            style={{ height: '600px', objectFit: 'cover' }}
                         />
                         <div className="carousel-caption d-md-block caption-container">
                             <p className=''>We provide comfort <br />to our clients!</p>
