@@ -52,4 +52,4 @@ jobs:
           app-name: 'hotelweb'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_362115568E9343D4A244B338D9424748 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66CD09AE1FCA4B81A5261EF20F68F9C1 }}
